@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-semibold text-center mb-6">Pay Utilities</h1>
+
+        <div class="space-y-4">
+            <!-- Utilities Options -->
+            <div class="space-y-3">
+                <label for="internet" class="flex items-center space-x-2">
+                    <input type="radio" id="internet" name="utility-option" value="internet" class="h-5 w-5">
+                    <span class="text-lg">Internet Bill</span>
+                    <i class="fas fa-wifi text-gray-500"></i>
+                </label>
+                <label for="gas" class="flex items-center space-x-2">
+                    <input type="radio" id="gas" name="utility-option" value="gas" class="h-5 w-5">
+                    <span class="text-lg">Gas Bill</span>
+                    <i class="fas fa-gas-pump text-gray-500"></i>
+                </label>
+                <label for="kplc" class="flex items-center space-x-2">
+                    <input type="radio" id="kplc" name="utility-option" value="kplc" class="h-5 w-5">
+                    <span class="text-lg">KPLC</span>
+                    <i class="fas fa-bolt text-gray-500"></i>
+                </label>
+                <label for="petrol" class="flex items-center space-x-2">
+                    <input type="radio" id="petrol" name="utility-option" value="petrol" class="h-5 w-5">
+                    <span class="text-lg">Petrol Station</span>
+                    <i class="fas fa-gas-pump text-gray-500"></i>
+                </label>
+                <label for="supermarket" class="flex items-center space-x-2">
+                    <input type="radio" id="supermarket" name="utility-option" value="supermarket" class="h-5 w-5">
+                    <span class="text-lg">Supermarket</span>
+                    <i class="fas fa-store text-gray-500"></i>
+                </label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="mt-6 w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300">
+            Proceed to Payment
+        </button>
+    </div>
+
+{% endblock %}

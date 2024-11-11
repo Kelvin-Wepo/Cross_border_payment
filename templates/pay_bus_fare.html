@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-semibold text-center mb-6">Pay Bus Fare</h1>
+
+        <form action="#" class="space-y-6">
+            <!-- Bus Route -->
+            <div class="flex items-center border-b-2 border-gray-300 pb-2">
+                <i class="fas fa-bus text-gray-600 mr-3"></i>
+                <input type="text" id="bus-route" name="bus-route" placeholder="Enter bus route"
+                    class="w-full p-2 text-lg border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            </div>
+
+            <!-- Fare Amount -->
+            <div class="flex items-center border-b-2 border-gray-300 pb-2">
+                <i class="fas fa-dollar-sign text-gray-600 mr-3"></i>
+                <input type="number" id="fare-amount" name="fare-amount" placeholder="Enter fare amount"
+                    class="w-full p-2 text-lg border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300">
+                Pay Fare
+            </button>
+        </form>
+    </div>
+{% endblock %}

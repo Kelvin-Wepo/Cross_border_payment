@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-semibold text-center mb-6">Send Money</h1>
+
+        <div class="space-y-4">
+            <!-- Payment Options -->
+            <div class="space-y-2">
+                <label for="mpesa" class="flex items-center space-x-2">
+                    <input type="radio" id="mpesa" name="payment-option" value="mpesa" class="h-5 w-5">
+                    <img src="flags/kenya.png" alt="Kenya Flag" class="w-6 h-6">
+                    <span>M-Pesa</span>
+                </label>
+                <label for="bank" class="flex items-center space-x-2">
+                    <input type="radio" id="bank" name="payment-option" value="bank" class="h-5 w-5">
+                    <img src="flags/global.png" alt="Bank Flag" class="w-6 h-6">
+                    <span>Bank Transfer</span>
+                </label>
+                <label for="airtel" class="flex items-center space-x-2">
+                    <input type="radio" id="airtel" name="payment-option" value="airtel" class="h-5 w-5">
+                    <img src="flags/global.png" alt="Airtel Flag" class="w-6 h-6">
+                    <span>Airtel Money</span>
+                </label>
+                <label for="paypal" class="flex items-center space-x-2">
+                    <input type="radio" id="paypal" name="payment-option" value="paypal" class="h-5 w-5">
+                    <img src="flags/us.png" alt="US Flag" class="w-6 h-6">
+                    <span>PayPal</span>
+                </label>
+                <label for="payd" class="flex items-center space-x-2">
+                    <input type="radio" id="payd" name="payment-option" value="payd" class="h-5 w-5">
+                    <img src="flags/global.png" alt="Payd Flag" class="w-6 h-6">
+                    <span>PayD</span>
+                </label>
+            </div>
+
+            <!-- Country Selection -->
+            <div>
+                <h2 class="text-xl font-medium mb-2">Select Country</h2>
+                <input type="text" id="country-code" 
+                    placeholder="Start typing for country code..." 
+                    class="w-full p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    oninput="suggestCountryCodes()">
+                <div id="suggestions" class="mt-2 space-y-1"></div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="mt-6 w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300">
+            Proceed to Payment
+        </button>
+    </div>
+
+{% endblock %}
